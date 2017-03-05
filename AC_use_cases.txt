@@ -1,5 +1,12 @@
-Access Channel relevant explicit use case requirments from SRS:
+Access Channel(AC) relevant explicit use case requirments from SRS:
 11) UC11: IssueRequest (Actor: Access Channel, System: Server)
 12) UC12: ReceiveResponse (Actor: Access Channel, System:Server)
 13) UC13: Send Response (Actor Server:, System:Access Channel)
 14) UC14: ReceiveRequest (Actor: Server, System: Access Channel)
+
+At the highest level of abstraction:
+User interacts with AC interacts with System
+
+Most important: show interaction of AC with other entities
+
+Main parts: interfaces & services
