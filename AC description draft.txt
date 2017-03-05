@@ -1,0 +1,27 @@
+AC description draft
+
+Our main goal of using access chanels is to provide not transparency to the server but rather ease of use and reliability.
+
+Technologies used:
+Android:
+	Used programming languages:
+		Java
+Apple IOS:
+	Used programming languages:
+		Swift
+Webapp:
+	Used programming languages:
+		HTML
+		CSS
+		Javascript
+	Used protocols:
+		HTTP
+		UDP
+
+For all:
+	Used libraries:
+		Google Maps API: to interact with GIS system.
+
+
+(// Google Maps as technology is omitted because it is only interacted with through the access channel and not part of the access channel therfore not in scope?)
+(// Discuss whether we should perhaps use a multiOS framework for dev)
