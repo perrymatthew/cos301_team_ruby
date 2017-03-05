@@ -1,0 +1,47 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>40</x><y>40</y><w>780</w><h>520</h></coordinates><panel_attributes>*class diagram*
+User Management
+--
+bg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>90</y><w>360</w><h>80</h></coordinates><panel_attributes>Guest
+--
+
+--
++registerAsUser(userName: String, password: String): Boolean
++authenticate(userName: String, password: String): User
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>90</y><w>260</w><h>260</h></coordinates><panel_attributes>User
+--
+-id: Long
+-encryptedPassword: String
+-someUserField: String
+-isAdmin: Boolean
+--
++getSomeUserField(): String
++getIsAdmin(): Boolean
++updateSomeUserField(field: String): Boolean
++changePassword(password: String): Boolean
+#setAdminRights(rights: Boolean):
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>340</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>430</y><w>260</w><h>100</h></coordinates><panel_attributes>Admin
+--
+-user: User
+--
+-grantUserAdminRights(user: User): Boolean
+-removeUserAdminRights(user: User): Boolean
+-removeUser(user: User): Boolean
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>120</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>50</x><y>240</y><w>480</w><h>270</h></coordinates><panel_attributes>registerAsUser():
+A user should not be created if the email already belongs to an existing user
+If user already exits, give access to his/her profile
+Uses getUser(userName) - user should only be created if throws noSuchUser exception
+Send notification when user is created
+
+&lt;&lt;pre-conditions&gt;&gt;
+userName is a registered user
+
+0. System displays user management page
+1. Admin enters user details
+2. Admin clicks submit
+3. System searches for requested person
+4. System displays requested user
+
+&lt;&lt;post-condition&gt;&gt;
+No change
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>160</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>
