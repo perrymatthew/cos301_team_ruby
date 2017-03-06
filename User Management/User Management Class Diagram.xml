@@ -1,14 +1,14 @@
-<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>40</x><y>40</y><w>780</w><h>520</h></coordinates><panel_attributes>*class diagram*
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>10</x><y>0</y><w>780</w><h>620</h></coordinates><panel_attributes>*class diagram*
 User Management
 --
-bg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>90</y><w>360</w><h>80</h></coordinates><panel_attributes>Guest
+bg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>50</y><w>360</w><h>80</h></coordinates><panel_attributes>Guest
 --
 
 --
 +registerAsUser(userName: String, password: String): Boolean
 +authenticate(userName: String, password: String): User
 
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>90</y><w>260</w><h>260</h></coordinates><panel_attributes>User
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>50</y><w>260</w><h>260</h></coordinates><panel_attributes>User
 --
 -id: Long
 -encryptedPassword: String
@@ -19,15 +19,21 @@ bg=blue</panel_attributes><additional_attributes></additional_attributes></eleme
 +getIsAdmin(): Boolean
 +updateSomeUserField(field: String): Boolean
 +changePassword(password: String): Boolean
-#setAdminRights(rights: Boolean):
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>340</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>430</y><w>260</w><h>100</h></coordinates><panel_attributes>Admin
++deleteProfileRequest(): Boolean
+#setAdminRights(rights: Boolean): Boolean
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>300</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>440</y><w>260</w><h>170</h></coordinates><panel_attributes>Admin
 --
 -user: User
 --
 -grantUserAdminRights(user: User): Boolean
 -removeUserAdminRights(user: User): Boolean
 -removeUser(user: User): Boolean
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>120</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>50</x><y>240</y><w>480</w><h>270</h></coordinates><panel_attributes>registerAsUser():
+-createSomeUserField(field: String): Boolean
+-getSomeUserField(field: String): Boolean
+-updateSomeUserField(field: String): Boolean
+-removeSomeUserField(field: String): Boolean
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>80</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>20</x><y>200</y><w>480</w><h>270</h></coordinates><panel_attributes>registerAsUser():
 A user should not be created if the email already belongs to an existing user
 If user already exits, give access to his/her profile
 Uses getUser(userName) - user should only be created if throws noSuchUser exception
@@ -44,4 +50,8 @@ userName is a registered user
 
 &lt;&lt;post-condition&gt;&gt;
 No change
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>160</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>120</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLNote</id><coordinates><x>620</x><y>340</y><w>160</w><h>80</h></coordinates><panel_attributes>someUserField is a place-
+holder for user profile fields
+that Admins create and
+manage.
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>300</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element></diagram>
