@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{float}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -31,12 +32,12 @@
 			
 				
 		\begin{flushright} \large
-			Matthew Perry - u13017030 \\
-			Unarine Rambani - u14004489  \\
+			Matthew Perry - u13017030\\
+			Unarine Rambani - u14004489\\
 			Phuti Setoaba -  u13032616\\
-			Mankgwanyane Tlaka - u14351872  \\
+			Mankgwanyane Tlaka - u14351872\\
 			Victor Twigge -  u10376802\\
-			Bernard van Tonder - u15008992  \\
+			Bernard van Tonder - u15008992\\
 		\end{flushright}
 		
 		
@@ -51,18 +52,24 @@
 \clearpage
 \section{Introduction}
 	\input{Introduction/Introduction.tex}
+	\subsection{N-Tier Architecture with Technologies}
+		\begin{figure}[H]
+			\includegraphics[width=150mm]{Introduction/N-Tier_with_Technologies.png}
+		\end{figure}
+	\subsection{Deployment Diagram}
+		\begin{figure}[H]
+			\includegraphics[width=150mm]{Deployment/Deployment_Diagram.png}
+		\end{figure}
 \clearpage
 \section{Requirements}
 	\input{Introduction/Requirements.tex}
+\clearpage
 \section{Design Constraints}
 	\input{Introduction/Design_Constraints.tex}
+\clearpage
 \section{Software System Attributes}
 	\input{Introduction/Software_system_attributes.tex}
 \clearpage
-\section{Deployment Diagram}
-	\begin{figure}[H]
-		\includegraphics[width=0.8\textwidth]{Deployment/Deployment_Diagram.png}
-	\end{figure}
 \section{Access Modules}
 	\input{Access_Modules/Access_Modules.tex}
 \clearpage
