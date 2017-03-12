@@ -1,1 +1,36 @@
+\subsection{Reliability}
+\begin{itemize}
+    \item The system should generate accurate results for searches. A message should be displayed if a location cannot be found or the search cannot be performed.
+    \item The system should determine user location and display level of accuracy for triangulation.  
+    \item The system should generate correct and reasonable routes when provided with two locations.
+    \item Users with administration privileges should be able to create, update and remove locations.
+    \item Notifications should be sent to all registered users via email or SMS.
+\end{itemize}
 
+\subsection{Availability}
+\begin{itemize}
+    \item The system should always be available.
+    \item An Internet connection should be available for the application to communicate with the database.
+    \item The application should be connected to the built-in GPS application so that the user's location can be determined.
+    \item Users should be notified if the system is not available.
+    
+\end{itemize}
+
+\subsection{Security}
+\begin{itemize}
+    \item Communication between the application and the user database should be encrypted.
+    \item If a user attempts to log in with invalid credentials, they should not be given access and a failure message should be displayed.
+    \item Only users with administration privileges should be able to perform functions that deal with the management of location objects and events.
+    
+\end{itemize}
+
+\subsection{Maintainability}
+\begin{itemize}
+    \item The system should be implemented with as little coupling as possible, so that it is easy to add new functions and extend it.
+    \item Tests must be built for each module in isolation, in order to determine their functionality. 
+\end{itemize}
+\subsection{Portability}
+    \begin{itemize}
+        \item The application should be portable with both Android and iOS platforms.
+    \end{itemize}         
+\end{document}

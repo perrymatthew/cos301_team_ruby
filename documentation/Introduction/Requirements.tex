@@ -1,18 +1,18 @@
 \subsection{External Interface Requirements}
     \subsubsection{User Interface}
     
-        \subsubsubsection{\textbf{Login Interface}}
-            The user will be presented with a login form with a username/email and a password field. The password field will hide input in order to ensure security. An error message wil be displayed if the user inputs incorrect details for these fields. In the case that the user is not registered, a 'Register' option will be provided below the form; clicking on this link will present the user with a registration form.
-    \\  \\
-        \subsubsubsection{\textbf{Search Interface}}
+        \paragraph{\textbf{Login Interface}}
+            The user will be presented with a login form with a username/email and a password field. The password field will hide input in order to ensure security. An error message will be displayed if the user inputs incorrect details for these fields. In the case that the user is not registered, a 'Register' option will be provided below the form; clicking on this link will present the user with a registration form.
+    
+        \paragraph{\textbf{Search Interface}}
             An interactive search bar will be persisted at the top of the device screen. A user can click on the search bar and enter the name of a location to search for it.
-    \\  \\
-        \subsubsubsection{\textbf{Navigation Interface}}
+    
+        \paragraph{\textbf{Navigation Interface}}
             Once a user's current and destination locations have been determined, the user will be required to press the 'Navigate' button in order to bring up the Navigation view that will render and display a view of the user's navigation session. 
-    \\  \\
-        \subsubsubsection{\textbf{Administration Control Panel Interface}}
+    
+        \paragraph{\textbf{Administration Control Panel Interface}}
             This interface will allow users with Administrator privileges to manage location and event information.
-    \\  \\
+    
     \subsubsection{Hardware Interface}
         For the mobile applications, the user will need to will need an Android or iOS mobile device. The web portal does not have any hardware interfaces since it will not be developed for specific operating systems. GPS functionality will be handled by the device's built-in GPS application and connectivity to the server would be managed by the underlying operating system.
         
@@ -20,17 +20,16 @@
     The mobile application will communicate with the GPS application in order to acquire spatial data; the application will also communicate with the database server to get information about different locations that are available on campus. The system will need either an operating system or a web browser in order to be operable.
         
     \subsubsection{Communication Interface}
-    Communication between the different parts of the system will be handled by the underlying operating system. Communication with the server will be done using the HTTP/HTTPS protocol over the device's internet/wifi connections
+    Communication between the different parts of the system will be handled by the underlying operating system. Communication with the server will be done using the HTTP/HTTPS protocol over the device's internet/WiFi connections
 
 \subsection{Performance Requirements}
-    \\ \\
-    \subsubsubsection{\textbf{Search Feature}}
+    \subsubsection{\textbf{Search Feature}}
         The search feature should be prominent so that it is easily locatable for the user.
-    \\ \\    
-    \subsubsubsection{\textbf{Search Results}}
+     
+    \subsubsection{\textbf{Search Results}}
         Results from the search feature should be displayed in a list if more than one location is returned.
-    \\ \\
-    \subsubsubsection{\textbf{Response Times}}
+    
+    \subsubsection{\textbf{Response Times}}
         \begin{itemize}
             \item The mobile application and the web portal should be interactive and responsive.
             \item The system should respond to user input almost immediately.
@@ -40,8 +39,8 @@
 			\item Generate routes for users within 2 seconds.
 			\item Update the user's location every second when navigating.
         \end{itemize}
-    \\ \\
-    \subsubsubsection{\textbf{Dependability}}
+
+    \subsubsection{\textbf{Dependability}}
         \begin{itemize}
             \item The system should give the user an indication when executing a process that will require the user to wait.
             \item The system should display a message if an error is encountered.
